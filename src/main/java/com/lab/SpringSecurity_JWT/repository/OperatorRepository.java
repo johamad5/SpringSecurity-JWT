@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface OperatorRepository extends JpaRepository<Operator, Long> {
     Optional<Operator> findByUsername(String username);
-    Boolean existsByUsername(String username);
+    boolean existsByUsername(String username);
 }
