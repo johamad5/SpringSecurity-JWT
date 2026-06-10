@@ -14,7 +14,7 @@ import java.util.Date;
 @Component
 public class JwtGenerator {
     byte[] keyBytes = Decoders.BASE64.decode(SecurityConstants.JWT_SIGNATURE);
-    SecretKey key = Keys.hmacShaKeyFor(keyBytes);
+    SecretKey key = Keys.hmacShaKeyFor(SecurityConstants.JWT_SIGNATURE.getBytes());
 
     public String generateToken(Authentication authentication){
 
