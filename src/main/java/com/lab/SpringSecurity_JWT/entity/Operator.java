@@ -29,9 +29,8 @@ public class Operator {
     @Size(max = 20)
     private String username;
 
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false)
     @NotBlank
-    @Size(max = 20)
     private String password;
 
     @ManyToMany( fetch = FetchType.EAGER, cascade = CascadeType.ALL)
